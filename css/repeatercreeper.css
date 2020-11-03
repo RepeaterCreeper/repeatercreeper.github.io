@@ -78,10 +78,32 @@ header {
 .btn {
     outline: none;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .btn:not(:last-of-type) {
     margin-right: 16px;
+}
+
+.btn-fab {
+    width: 64px;
+    height: 64px;
+    text-align: center;
+    position: fixed;
+    bottom: 64px;
+    right: 64px;
+    border-radius: 50%;
+    color: white;
+    background-color: #28272b;
+    cursor: pointer;
+}
+
+.btn-fab i {
+    pointer-events: none;
+}
+
+.btn-fab:hover {
+    background-color: #716b81;
 }
 
 .btn-outline {
@@ -90,6 +112,7 @@ header {
     background-color: transparent;
     color: white;
     letter-spacing: 2pt;
+    border-style: solid;
 }
 
 .btn-outline.blue-border {
@@ -102,6 +125,49 @@ header {
 
 .btn-outline.orange-border {
     border-color: #EF9905;
+}
+
+.social-icon {
+    width: 64px;
+    height: 64px;
+    padding: 8px;
+    border: 2px solid white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    margin: 0 16px;
+    transition: 0.5s ease;
+}
+
+.social-icon.facebook:hover {
+    color: #3b5998;
+    border-color: #3b5998;
+}
+
+.social-icon.twitter:hover {
+    color: #00acee;
+    border-color: #00acee;
+}
+
+.social-icon.linkedin:hover {
+    color: #0e76a8;
+    border-color: #0e76a8;
+}
+
+.social-icon.github:hover {
+    color: #211F1F;
+    border-color: #211F1F;
+}
+
+.social-icon.youtube:hover {
+    color: #FF0000;
+    border-color: #FF0000;
+}
+
+footer a.nav-link {
+    text-decoration: none;
+    color: rgb(200, 184, 251);
 }
 
 .bg-img-container {
@@ -132,6 +198,7 @@ header {
     display: flex;
     flex-direction: row;
     gap: 16px;
+    flex-wrap: wrap;
 }
 
 .skill-item {
@@ -139,7 +206,7 @@ header {
     flex-direction: column;
     background-color: #464748;
     border-radius: 32px;
-    flex: 1;
+    flex: 1 1 25%;
     padding: 16px;
     justify-content: center;
     align-items: center;
@@ -194,6 +261,18 @@ header {
     border: 2px solid rgb(69, 197, 18);
 }
 
+.project-item.completed {
+    border-color: #F48EFF;
+}
+
+.project-item.in-progress {
+    border-color: rgb(69, 197, 18);
+}
+
+.project-item.discontinued {
+    border-color: #fc4444;
+}
+
 .project-container {
     padding: 16px;
     display: flex;
@@ -224,6 +303,22 @@ header {
     color: black;
     font-weight: bold;
     letter-spacing: 2pt;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.project-container .project-action a {
+    text-decoration: none;
+}
+
+.project-container .project-action .btn-action:hover {
+    background-color: #34aa40;
+    color: white;
+}
+
+.project-container .project-action .btn-action.disabled:hover {
+    cursor: not-allowed;
+    background-color: #fc4444;
 }
 
 .banner-header {
@@ -258,6 +353,23 @@ header {
     margin: 1.5rem auto;
 }
 
+.project-legend {
+    background-color: rgb(54, 35, 35);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer {
+    min-height: 25%;
+    display: flex;
+    background-color: #040505;
+    color: white;
+    padding: 32px;
+    gap: 64px;
+}
+
 /**
  * Hover Overrides
  */
@@ -271,4 +383,86 @@ header {
 
 .hvr-bounce-to-right.pink-border:before {
     background: #FF2081;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .skills-container.soft-skills {
+        display: block;
+    }
+
+    .projects-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    header nav {
+        display: none;
+    }
+
+    #about .section-content p {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .soft-skills>div,
+    .soft-skills> :nth-child(even) {
+        flex-direction: column;
+    }
+
+    .soft-skill-item div:first-child {
+        margin: 0 auto;
+    }
+
+    .skill-item {
+        flex-basis: 100%;
+    }
+
+    .blob {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .section-content {
+        margin: 64px 8px 8px 8px;
+        padding: 0;
+    }
+
+    .project-container {
+        display: grid;
+    }
+
+    .project-legend {
+        display: grid;
+    }
+
+    .banner-header {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .banner-header.left,
+    .banner-header.right {
+        border-radius: 0;
+    }
+
+    .btn:not(:last-of-type) {
+        margin-right: 0;
+    }
+
+    .section-actions {
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+
+    .section-actions a {
+        width: 90%;
+    }
 }

@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/hover.css">
     <link rel="stylesheet" href="css/repeatercreeper.css" />
     
@@ -43,7 +44,7 @@
 
 <body>
     <div class="bg-img-container"></div>
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="380.5" height="275" viewBox="0 0 380.5 275" style="position: absolute; right: 0; top: -64px; z-index: -1;">
+    <svg class="blob" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="380.5" height="275" viewBox="0 0 380.5 275" style="position: absolute; right: 0; top: -64px; z-index: -1;">
         <defs>
           <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
             <stop offset="0" stop-color="#6a11cb"/>
@@ -67,13 +68,13 @@
             </ul>
         </nav>
     </header>
-    <section class="section hero">
+    <section class="section hero" id="home">
         <div class="hero-content">
             <h1 class="title">Joseph Chua</h1>
             <p class="subtitle">a <span style="color: yellow;">Web Developer</span></p>
             <div style="margin-top: 32px;">
-                <button class="btn btn-outline blue-border hvr-bounce-to-right">My Work</button>
-                <button class="btn btn-outline orange-border hvr-bounce-to-right">Contact Me</button>
+                <a href="#projects" class="btn btn-outline blue-border hvr-bounce-to-right">My Work</a>
+                <a href="#contact" class="btn btn-outline orange-border hvr-bounce-to-right">Contact Me</a>
             </div>
         </div>
     </section>
@@ -82,12 +83,12 @@
             <h1 style="margin: 0; font-weight: 800">About Me</h1>
         </div>
         <div class="section-content">
-            <p>My name is Joseph Chua and I am 20 years old. I am currently in my 2<sup>nd</sup> year studying <span style="color: rgb(97, 255, 70);">Computer Science</span> at Eastwoods Professional College of Science and Technology in the Philippines.</p>
+            <p>My name is Joseph Chua and I am <span id="age">20</span> years old. I am currently in my 2<sup>nd</sup> year studying <span style="color: rgb(97, 255, 70);">Computer Science</span> at Eastwoods Professional College of Science and Technology in the Philippines.</p>
             <p>While I do love Full Stack <span style="color:rgb(97, 255, 70)">Web Development</span> and completing a project from the ground up. I equally, if not more, enjoy doing UX/UI Design in Adobe XD or Figma. If I was to pursue a career, it would most likely be UX/UI Designer. If you want to know more about me, you can read more below or we can have a chat!</p>
         </div>
         <div class="section-actions">
-            <button class="btn btn-outline blue-border hvr-bounce-to-right">View my Resume</button>
-            <button class="btn btn-outline pink-border hvr-bounce-to-right">Let's Chat!</button>
+            <a class="btn btn-outline blue-border hvr-bounce-to-right" href="#">View my Resume</a>
+            <a class="btn btn-outline pink-border hvr-bounce-to-right" href="https://m.me/TheBoyNamed">Let's Chat!</a>
         </div>
     </section>
     <section id="projects" class="section">
@@ -95,81 +96,97 @@
             <h1 style="margin: 0;">Projects</h1>
         </div>
         <div class="section-content">
+            <div class="project-legend">
+                <div style="color: #F48EFF;"><span style="font-size: 1.5rem;">&#9632;</span> - Completed</div>
+                <div style="color: rgb(69, 197, 18);"><span style="font-size: 1.5rem;">&#9632;</span> - In Progress</div>
+                <div style="color: #fc4444;"><span style="font-size: 1.5rem;">&#9632;</span> - Discontinued / Abandoned</div>
+            </div>
             <div class="projects-list">
-                <div class="project-item">
+                <div class="project-item completed">
                     <div class="project-container">
                         <div class="project-header">
                             <h1>Golden Caller</h1>
                             <p>2014</p>
                         </div>
                         <div class="project-action">
-                            <button class="btn-action">View on GitHub</button>
+                            <a target="_blank" href="https://github.com/RepeaterCreeper/Golden-Caller" class="btn-action"><i class="fab fa-github"></i> View on GitHub</a>
                         </div>
                     </div>
                 </div>
-                <div class="project-item">
+                <div class="project-item completed">
                     <div class="project-container">
                         <div class="project-header">
                             <h1>CS Compare</h1>
                             <p>2016</p>
                         </div>
                         <div class="project-action">
-                            <button class="btn-action">View on GitHub</button>
+                            <a target="_blank" href="https://github.com/RepeaterCreeper/CS-Compare" class="btn-action"><i class="fab fa-github"></i> View on GitHub</a>
                         </div>
                     </div>
                 </div>
-                <div class="project-item">
+                <div class="project-item completed">
                     <div class="project-container">
                         <div class="project-header">
-                            <h1 style="margin: 0;">Vexill</h1>
-                            <p>2019 - <i>present</i></p>
+                            <h1>PCSO Lottery Checker</h1>
+                            <p>2019</p>
                         </div>
                         <div class="project-action">
-                            <button class="btn-action">View on GitHub</button>
+                            <a target="_blank" href="https://github.com/RepeaterCreeper/PCSO-Lottery-Checker" class="btn-action"><i class="fab fa-github"></i> View on GitHub</a>
                         </div>
                     </div>
                 </div>
-                <div class="project-item">
+                <div class="project-item discontinued">
                     <div class="project-container">
                         <div class="project-header">
                             <h1 style="margin: 0;">ATC Buddy</h1>
                             <p>2019</i></p>
                         </div>
                         <div class="project-action">
-                            <button class="btn-action">View on GitHub</button>
+                            <a target="_blank" href="https://github.com/RepeaterCreeper/ATC-Buddy" class="btn-action"><i class="fab fa-github"></i> View on GitHub</a>
                         </div>
                     </div>
                 </div>
-                <div class="project-item">
+                <div class="project-item in-progress">
                     <div class="project-container">
                         <div class="project-header">
                             <h1 style="margin: 0;">FanFiction Browser</h1>
-                            <p>2020</p>
+                            <p>2020 - <i>present</i></p>
                         </div>
                         <div class="project-action">
-                            <button class="btn-action">View on GitHub</button>
+                            <a target="_blank" href="https://github.com/RepeaterCreeper/FanFiction-Browser" class="btn-action"><i class="fab fa-github"></i> View on GitHub</a>
                         </div>
                     </div>
                 </div>
-                <div class="project-item">
+                <div class="project-item completed">
                     <div class="project-container">
                         <div class="project-header">
                             <h1 style="margin: 0;">Sikret</h1>
                             <p>2020</p>
                         </div>
                         <div class="project-action">
-                            <button class="btn-action">View on GitHub</button>
+                            <a target="_blank" href="https://github.com/RepeaterCreeper/sikret" class="btn-action"><i class="fab fa-github"></i> View on GitHub</a>
                         </div>
                     </div>
                 </div>
-                <div class="project-item">
+                <div class="project-item in-progress">
                     <div class="project-container">
                         <div class="project-header">
                             <h1 style="margin: 0;">LoL Stats</h1>
                             <p>2020 - <i>present</i></p>
                         </div>
                         <div class="project-action">
-                            <button class="btn-action">View on GitHub</button>
+                            <a target="_blank" class="btn-action" href="https://lolsea.net"><i class="fa fa-eye"></i> View More Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item in-progress">
+                    <div class="project-container">
+                        <div class="project-header">
+                            <h1 style="margin: 0;">Vexill (collab)</h1>
+                            <p>2019 - <i>present</i></p>
+                        </div>
+                        <div class="project-action">
+                            <a target="_blank" class="btn-action disabled"><i class="fa fa-eye-slash"></i> Private</a>
                         </div>
                     </div>
                 </div>
@@ -183,7 +200,7 @@
         <div class="section-content">
             <h1 style="color: #8C98E1">Soft Skills</h1>
             <div class="skills-container soft-skills">
-                <div>
+                <div class="soft-skill-item">
                     <div>
                         <img src="assets/community.svg" style="width: 15rem;"/>
                     </div>
@@ -192,7 +209,7 @@
                         <p>I have high compatibility working with just about anyone. Very rarely do I have someone that I cannot work with and vice-versa.</p>
                     </div>
                 </div>
-                <div>
+                <div class="soft-skill-item">
                     <div>
                         <img src="assets/success.svg" style="width: 15rem;"/>
                     </div>
@@ -201,7 +218,7 @@
                         <p>I can make people feel at ease under high pressure situation. This was demonstrated at my previous job as a PSE.</p>
                     </div>
                 </div>
-                <div>
+                <div class="soft-skill-item">
                     <div>
                         <img src="assets/idea.svg" style="width: 15rem;"/>
                     </div>
@@ -210,7 +227,7 @@
                         <p>I love thinking of new ideas that would benefit me in my daily life and also benefit other people as well. </p>
                     </div>
                 </div>
-                <div>
+                <div class="soft-skill-item">
                     <div>
                         <img src="assets/customer_support.svg" style="width: 15rem;"/>
                     </div>
@@ -238,53 +255,82 @@
                     <img src="assets/git.svg">
                     <h1>Git</h1>
                 </div>
+                <div class="skill-item">
+                    <img src="assets/node.svg">
+                    <h1>NodeJS</h1>
+                </div>
+                <div class="skill-item">
+                    <img src="assets/php.svg">
+                    <h1>PHP</h1>
+                </div>
             </div>
         </div>
     </section>
     <section id="achievements" class="section">
         <div class="banner-header right"style="background-color: #30BF43;">
-            <h1 style="margin: 0;">Achievements</h1>
+            <h1>Achievements</h1>
         </div>
         <div class="section-content">
-            <div id="noAchievementsContainer" style="display: flex; justify-content: center; align-items: center;">
-                <img src="assets/missing.svg" style="width: 25%;">
+            <div>
+                <h2>Academic Achievements</h2>
+                <ul>
+                    <li><b>[2018]</b> Honors Diploma from Hillcrest High School</li>
+                    <li><b>[2016 - 2018]</b> Honor Roll for grades 9th, 10th, and 11th.</li>
+                    <li><b>[2017]</b> Named most helpful non-staff mentor in Code To Success Bootcamp.</li>
+                    <li><b>[2018]</b> Code To Success Scholarship Winner</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Life Achievements</h2>
+                <ul>
+                    <li><b>[2018 - 2019]</b> Worked for the first time at USPS REC as a Data Conversion Operator</li>
+                </ul>
             </div>
         </div>
     </section>
     <section id="contact" class="section">
         <div class="banner-header left" style="background-color: #F217B8;">
-            <h1 style="margin: 0;">Contact Me</h1>
+            <h1>Contact Me</h1>
         </div>
-        <div class="section-content" style="margin: 64px 32px 32px 32px; padding: 32px; color:white; gap: 16px; display: flex; flex-direction: column;">
+        <div class="section-content">
             <div>
-                <p>Email: RepeaterCreeper@gmail.com</p>
-                <p>Phone: +(63) 907-490-9542</p>
+                <h1>Let's talk!</h1>
+                <p>You can reach me through my social media accounts listed down below, or you can <a style="text-decoration: none; color: lightblue" href="mailto:repeatercreeper@gmail.com">email me</a> directly at <b>RepeaterCreeper@gmail.com</b>.</p>
+            </div>
+            <div>
+                <h1 style="text-align: center;">This section is work in progress.</h1>
             </div>
         </div>
     </section>
 
-    <footer style="min-height: 25%; display: flex; background-color: #040505; color: white; padding: 32px; gap: 64px;">
+    <footer style="flex-wrap: wrap;">
         <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
             <img src="/icon.png" style="width: 72px;"/>
             <p>Made with <i class="fa fa-heart" style="color: red;"></i> by Joseph Chua</p>
             <p>Copyright &copy; 2020. All rights reserved.</p>
         </div>
-        <div style="flex: 2;">
+        <div>
             <h1 style="margin: 0;">Links</h1>
-            <ul style="list-style-type: none;">
-                <li><a style="text-decoration: none; color: rgb(200, 184, 251);" href="#about">about</a></li>
-                <li><a style="text-decoration: none; color: rgb(200, 184, 251);" href="#projects">projects</a></li>
-                <li><a style="text-decoration: none; color: rgb(200, 184, 251);" href="#skills">skills</a></li>
-                <li><a style="text-decoration: none; color: rgb(200, 184, 251);" href="#achievements">achievements</a></li>
-                <li><a style="text-decoration: none; color: rgb(200, 184, 251);" href="#contact">contact</a></li>
+            <ul class="nav-links" style="list-style-type: none;">
+                <li><a class="nav-link" href="#about">about</a></li>
+                <li><a class="nav-link" href="#projects">projects</a></li>
+                <li><a class="nav-link" href="#skills">skills</a></li>
+                <li><a class="nav-link" href="#achievements">achievements</a></li>
+                <li><a class="nav-link" href="#contact">contact</a></li>
             </ul>
         </div>
-        <div style="display: flex; justify-content: space-between; flex-direction: column;">
-            <a href="https://facebook.com/TheBoyNamed" style="font-size: 3rem;"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.linkedin.com/in/joseph-chua-677a728b/" style="font-size: 3rem;"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/RepeaterCreeper" style="font-size: 3rem;"><i class="fab fa-twitter"></i></a>
+        <div style="display: flex; flex: 1; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <a target="_blank" href="https://facebook.com/TheBoyNamed" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/RepeaterCreeper/" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+            <a target="_blank" href="https://twitter.com/RepeaterCreeper" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+            <a target="_blank" href="https://www.github.com/RepeaterCreeper" class="social-icon github"><i class="fab fa-github"></i></a>
+            <a target="_blank" href="https://www.youtube.com/RepeaterCreeper" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
         </div>
     </footer>
+
+    <a class="btn-fab animate__animated" href="#home">
+        <i class="fas fa-chevron-up" style="padding: 20px; font-size: 1.5rem; text-align: center; text-decoration: none;"></i>
+    </a>
 
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="https://labs.nearpod.com/bodymovin/demo/markus/halloween/lt.min.js"></script>
