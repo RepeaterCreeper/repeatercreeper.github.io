@@ -26,6 +26,16 @@ header {
     position: absolute
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(203, 188, 253);
+}
+
 .logo {
     flex: 1;
     display: flex;
