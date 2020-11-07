@@ -29,6 +29,7 @@ header {
 /* width */
 ::-webkit-scrollbar {
     width: 16px;
+    background-color: rgb(121, 121, 121);
 }
 
 /* Handle */
