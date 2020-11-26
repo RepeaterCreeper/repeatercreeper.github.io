@@ -1,1 +1,256 @@
-<h1>Hello World</h1>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Activity 1 - Midterm</title>
+</head>
+
+<body>
+    <div class="row no-gutters">
+        <div class="col-sm-12">
+            <div class="card m-2 shadow p-4 bg-primary text-white">
+                <h1>Discrete Mathematics</h1>
+                <p class="lead">This is a propositional logic substitution made by <b>Joseph Chua
+                        &lt;RepeaterCreeper&gt;</b>.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row no-gutters">
+        <div class="col-sm-12 col-md-4">
+            <div class="card m-2 shadow p-4 bg-" style="min-height: 256px;">
+                <p class="text-center"><b>OPERATIONS PRECEDENCE</b></p>
+                <ol>
+                    <li>¬ (NEGATION) </li>
+                    <li>∧ (CONJUNCTION)</li>
+                    <li>∨ (DISJUNCTION)</li>
+                    <li>→ (IMPLICATION)</li>
+                    <li>↔ (BICONDITIONAL)</li>
+                    <li>⊕ (EXCLUSIVE OR)</li>
+                </ol>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="card m-2 shadow p-4" style="min-height: 256px;">
+                <p class="text-center"><b>BACKSTORY</b></p>
+                <p>As I was doing my <b>Discrete Mathematics</b> which I could normally do in my head, until it got so
+                    complex that I had to write down the answers that I got before proceeding. So I thought, why not
+                    create a utility app that did this automatically for me without "cheating".</p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="card m-2 shadow p-4" style="min-height: 256px;">
+                <p class="text-center"><b>Statistics</b></p>
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Letters
+                        <span class="badge badge-primary badge-pill" id="stat-letterCount">0</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Values
+                        <span class="badge badge-primary badge-pill" id="stat-valueCount">0</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Substituted
+                        <span class="badge badge-primary badge-pill" id="stat-substituteCount">0</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row no-gutters">
+        <div class="col-sm-12">
+            <div class="card m-2 shadow p-4" style="min-height: 256px;">
+                <div class="card-content">
+                    <h4>Data Visualizer</h4>
+                    <div class="alert alert-danger" id="error-alert">Your input(s) were invalid, please verify you're
+                        following the proper format.</div>
+                    <div class="alert alert-success" id="success-alert">Good news! Your input is valid.</div>
+
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr id="container__letter-inputs"></tr>
+                        </thead>
+                        <tbody id="container__letter-values"></tbody>
+                    </table>
+                    <h4>Data Input</h4>
+                    <small>Enter all the values for each column beginning with the letter and separated by commas
+                        (,)</small>
+                    <textarea class="form-control" id="data-input" placeholder="Example: a 0,1,1,0,1"
+                        rows="6"></textarea>
+                    <hr>
+                    <h4>Question Prompts</h4>
+                    <small>Enter the question prompts here. One question per line ONLY.</small>
+                    <textarea class="form-control" id="question-prompts" placeholder="Example: p ∧ q ∧ r ∧ s ∧ t"
+                        rows="6"></textarea>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary" onclick="substitute()">Substitute</button>
+                    <button class="btn btn-warning" onclick="loadSample()">Load Sample</button>
+                </div>
+                <div class="m-2">
+                    <h4>Output</h4>
+                    <textarea class="form-control" id="substitute-output" rows="10" disabled></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row no-gutters">
+        <div class="col-sm-12">
+            <div class="card m-2 shadow bg-dark text-white">
+                <div class="card-content p-4">
+                    <div>
+                        <h2>Technologies Used</h2>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="15"
+                                aria-valuemin="0" aria-valuemax="100">HTML</div>
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 30%"
+                                aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">CSS</div>
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 50%"
+                                aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">JS</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div>
+                        <h2>Meet the Author</h2>
+                        <div>
+                            <img src="RepeaterCreeper.png" alt="RepeaterCreeper" />
+                        </div>
+                        <div>
+                            <p>My name is Joseph Chua also known as RepeaterCreeper.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+
+    <script>
+        if (!localStorage.getItem("substituteCount")) {
+            localStorage.setItem("substituteCount", 0);
+        }
+
+        document.querySelector("#error-alert").style.display = "none";
+        document.querySelector("#success-alert").style.display = "none";
+
+        document.querySelector("#stat-substituteCount").innerHTML = localStorage.getItem("substituteCount");
+
+        let solveObject = {};
+
+        document.querySelector("#data-input").addEventListener("input", (e) => {
+            generateTable();
+        });
+
+        function generateTable() {
+            if (document.querySelector("#data-input").value.length > 3) {
+                let lines = document.querySelector("#data-input").value.split("\n");
+
+                let letterContainer = document.querySelector("#container__letter-inputs"),
+                    letterValueContainer = document.querySelector("#container__letter-values"),
+                    letterOutput = "",
+                    letterValueOutput = "",
+                    matrix = [],
+                    letterCount = 0,
+                    valueCount = 0;
+
+                for (let line of lines) {
+                    let [letter, values] = line.split(" ");
+
+                    matrix.push(values.split(",").map(x => parseInt(x)));
+                    letterOutput += `<th>${letter}</th>`;
+
+                    solveObject[letter] = values.split(",").map(x => parseInt(x));
+
+                    letterCount++;
+                    valueCount += values.split(",").length;
+                }
+
+                for (let i = 0; i < matrix[0].length; i++) {
+                    letterValueOutput += "<tr>";
+                    for (let k = 0; k < matrix.length; k++) {
+                        // Uneven Matrix
+                        if (typeof matrix[k][i] === "undefined" || isNaN(matrix[k][i])) {
+                            document.querySelector("#error-alert").style.display = "block";
+                            document.querySelector("#success-alert").style.display = "none";
+                            letterContainer.innerHTML = "";
+                            letterValueContainer.innerHTML = "";
+                            return;
+                        }
+
+                        letterValueOutput += `<td>${matrix[k][i]}</td>`;
+                        document.querySelector("#error-alert").style.display = "none";
+                        document.querySelector("#success-alert").style.display = "block";
+                    }
+                    letterValueOutput += "</tr>"
+                }
+
+                letterContainer.innerHTML = letterOutput;
+                letterValueContainer.innerHTML = letterValueOutput;
+
+                document.querySelector("#stat-letterCount").innerHTML = letterCount;
+                document.querySelector("#stat-valueCount").innerHTML = valueCount;
+            }
+        }
+        function loadSample() {
+            let problems = `p ∧ q ∧ r ∧ s ∧ t\n¬ (¬ s ⊕ p → r → q)\n(p ∧ r) ↔ (q ∨ r ∨ s ↔ p)\n¬ (p ∧ q) ∨ (r ∨ s) ⊕ (p ⊕ t) → (r → q)\nq ⊕ r ⊕ t ⊕ s ⊕ p\n¬ (¬ s ∧ p ⊕ r ∧ q) → ¬((s ⊕ p) → (r ↔ q))\n¬ ((¬ s ⊕ p → r → q) → ¬ (t ∧ q) ∨ (p ∨ s))\np → q → r → s → t\n¬ (¬ (¬ t ↔ ¬ p ↔ ¬ s ↔ ¬ r ↔ ¬ q))\n(p ⊕ t) ∧ ¬ (r ∨ q) → (s ↔ q) → (t ⊕ p)`;
+            let inputs = `p 1,0,1,0,1,0,1\nq 1,1,1,0,1,1,1\nr 0,0,1,1,1,0,0\ns 0,1,0,1,0,1,0\nt 1,0,1,1,0,0,1`;
+            
+            document.querySelector("#data-input").value = inputs;
+            document.querySelector("#question-prompts").value = problems;
+
+            generateTable();
+        }
+        function substitute() {
+            let problems = document.querySelector("#question-prompts").value,
+                output = [];
+
+            for (let problem of problems.split("\n")) {
+                for (let i = 0; i < solveObject[Object.keys(solveObject)[0]].length; i++) {
+                    let curSet = problem;
+                    for (let key in solveObject) {
+                        curSet = curSet.replaceAll(key, solveObject[key][i]);
+                    }
+
+                    output.push(curSet);
+                }
+            }
+
+            let outputText = "";
+            for (let i = 0; i < output.length; i++) {
+                outputText += `${i + 1}. ${output[i]}\n`;
+            }
+
+            document.querySelector("#substitute-output").value = outputText;
+            localStorage.setItem("substituteCount", parseInt(localStorage.getItem("substituteCount")) + 1);
+            document.querySelector("#stat-substituteCount").innerHTML = localStorage.getItem("substituteCount");
+        }
+    </script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
