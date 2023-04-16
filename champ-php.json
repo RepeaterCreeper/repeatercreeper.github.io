@@ -1,7 +1,7 @@
 {
   "php8.2": {
     "version": "8.2.5",
-    "download": "https://windows.php.net/downloads/releases/php-8.2.5-Win32-vs16-x86.zip",
+    "download": "https://windows.php.net/downloads/releases/php-8.2.5-Win32-vs16-x86.zip"
   },
   "php8.1": {
     "version": "8.1.18",
